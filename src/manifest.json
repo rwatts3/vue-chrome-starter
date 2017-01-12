@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "vue-chrome-starter",
+  "description": "Quick start for chrome extensions with Vue2",
+  "version": "0.0.1",
+  "icons": { "256": "images/logo_256.png" },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_page": "options/index.html",
+  "browser_action": {
+    "default_popup": "popup/index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
