@@ -22,6 +22,8 @@
     "css-loader": "^0.26.1",
     "fs-extra": "^1.0.0",
     "html-webpack-plugin": "^2.26.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-loader": "^1.2.2",
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.8",
     "webpack": "beta"

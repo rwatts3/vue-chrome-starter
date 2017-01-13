@@ -3,6 +3,10 @@
 module.exports = {
   popupTitle: 'popup page',
   optionsTitle: 'options page',
+  vendor: [
+    'vue',
+    'vue-router'
+  ],
   babel: {
     babelrc: false,
     presets: [
@@ -10,11 +14,10 @@ module.exports = {
       'stage-1'
     ]
   },
-  // postcss: [
-  //   require('autoprefixer')({
-  //     browsers: ['last 2 versions', '> 1%', 'ie > 8']
-  //   }),
-  //   require('precss')
-  // ],
+  postcss: [
+    require('postcss-cssnext')({
+      browsers: ['last 2 versions', 'ie > 8']
+    })
+  ],
   cssModules: false
 }
