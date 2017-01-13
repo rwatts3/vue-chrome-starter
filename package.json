@@ -7,7 +7,8 @@
   "author": "Andself <chende301@foxmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -fr ./dist && webpack --config build/webpack.config.js && cp -r ./src/manifest.json ./src/icons ./dist "
+    "build": "rm -fr ./dist && webpack --config build/webpack.config.js && cp -r ./src/manifest.json ./src/icons ./dist ",
+    "dev": "rm -fr ./dist && webpack --config build/webpack.config.js --watch && cp -r ./src/manifest.json ./src/icons ./dist "
   },
   "dependencies": {
     "vue": "^2.1.8",

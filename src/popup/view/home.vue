@@ -2,9 +2,6 @@
   <main id="fullPage">
     <div class="mian">
       <h1>Hello Vue !</h1>
-      <ul class="pathlist">
-        <ListItem v-for="item in pathList" :data="item"></listitem>
-      </ul>
     </div>
     <div class="footer">
       <!-- 下面这段无关主题，可以不看 -->
@@ -26,36 +23,14 @@ import ListItem from '../component/ListItem';
     data () {
       return {
         pathList: [
-          { title: 'todo list', path: '/todo' },
-          { title: 'tab card', path: '/tab' },
-        ]
+          ]
       }
     },
     methods: {
-      add () {
-        if (this.text.length > 0) {
-          this.list.push({
-            value: this.text,
-            state: false,
-            edit: false
-          });
-          this.text = '';
-        }
-      },
-      remove (i) {
-        this.list.splice(i, 1);
-      },
-      removeAll () {
-        this.list = this.list.filter((i) => !i.state)
-      }
     },
     components: {
-      ListItem,
     },
     computed: {
-      select () {
-        return this.list.filter((i) => i.state == true)
-      }
     }
   }
 </script>

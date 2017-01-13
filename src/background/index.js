@@ -1,3 +1,3 @@
-import says from './say';
+import say from './say';
 
-says();
+say();

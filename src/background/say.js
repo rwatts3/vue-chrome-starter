@@ -1,3 +1,3 @@
-export default function says() {
+export default function say() {
   alert('hello');
 }

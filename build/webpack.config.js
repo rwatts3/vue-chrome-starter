@@ -11,7 +11,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: '[name].[chunkhash:8].js'
+    filename: '[name].js'
   },
   resolve: {
     extensions: ['.js', '.vue', '.css', '.json'],
