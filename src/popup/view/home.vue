@@ -2,7 +2,6 @@
   <main id="fullPage">
     <div class="mian">
       <h1>Hello Vue !</h1>
-      <p>1232333</p>
     </div>
     <div class="footer">
       <!-- 下面这段无关主题，可以不看 -->

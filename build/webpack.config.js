@@ -3,13 +3,14 @@ const fs = require('fs-extra')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const config = require('./config')
 fs.copySync('tmp/', 'dist/')
 
 module.exports = {
   entry: {
     popup: './src/popup/index.js',
     options: './src/options/index.js',
-    background: './src/background/index.js',
+    'background': './src/background/index.js',
     vendor: ['vue', 'vue-router'],
   },
   output: {
@@ -45,13 +46,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'popup page',
+      title: config.popupTitle,
       template: __dirname + '/index.html',
       filename: 'popup.html',
       chunks: ['vendor', 'popup']
     }),
     new HtmlWebpackPlugin({
-      title: 'options page',
+      title: config.optionsTitle,
       template: __dirname + '/index.html',
       filename: 'options.html',
       chunks: ['vendor', 'options']

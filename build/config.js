@@ -1,8 +1,8 @@
 'use strict'
 
 module.exports = {
-  port: '4000',
-  title: '移动审批',
+  popupTitle: 'popup page',
+  optionsTitle: 'options page',
   babel: {
     babelrc: false,
     presets: [
@@ -10,11 +10,11 @@ module.exports = {
       'stage-1'
     ]
   },
-  postcss: [
-    require('autoprefixer')({
-      browsers: ['last 2 versions', '> 1%', 'ie > 8']
-    }),
-    require('precss')
-  ],
+  // postcss: [
+  //   require('autoprefixer')({
+  //     browsers: ['last 2 versions', '> 1%', 'ie > 8']
+  //   }),
+  //   require('precss')
+  // ],
   cssModules: false
 }
