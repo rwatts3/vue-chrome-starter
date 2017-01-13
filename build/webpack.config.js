@@ -1,13 +1,17 @@
-const path = require('path');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    '/popup/index': './src/popup/index.js',
-    '/options/index': './src/options/index.js',
+    popup: './src/popup/index.js',
+    options: './src/options/index.js',
+    background: './src/background/index.js',
+    vendor: ['vue', 'vue-router'],
   },
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: '[name].js'
+    filename: '[name].[chunkhash:8].js'
   },
   resolve: {
     extensions: ['.js', '.vue', '.css', '.json'],
@@ -35,5 +39,23 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'popup page',
+      template: __dirname + '/index.html',
+      filename: 'popup.html',
+      chunks: ['vendor', 'popup']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'options page',
+      template: __dirname + '/index.html',
+      filename: 'options.html',
+      chunks: ['vendor', 'options']
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.[chunkhash:8].js'
+    }),
+  ]
 }
