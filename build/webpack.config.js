@@ -1,6 +1,9 @@
 const path = require('path')
+const fs = require('fs-extra')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+fs.copySync('tmp/', 'dist/')
 
 module.exports = {
   entry: {
