@@ -50,8 +50,8 @@ h1{
   border-bottom: 1px solid #42b983;
 }
 #fullPage{
-  width: 400px;
-  min-height: 500px;
+  width: 320px;
+  min-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;

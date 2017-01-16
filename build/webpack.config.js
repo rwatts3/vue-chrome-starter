@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs-extra')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ProgressBarPlugin = require('progress-bar-webpack-plugin')
+// const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 const config = require('./config')
 fs.copySync('static/', 'dist/')
@@ -62,6 +62,6 @@ module.exports = {
     //   name: 'vendor',
     //   filename: 'vendor.[chunkhash:8].js'
     // }),
-    new ProgressBarPlugin(),
+    // new ProgressBarPlugin(),
   ]
 }

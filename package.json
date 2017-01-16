@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -fr ./dist && webpack --config build/webpack.config.js && cp -r ./src/manifest.json ./src/icons ./dist ",
-    "dev": "rm -fr ./dist && webpack --config build/webpack.config.js --watch"
+    "dev": "webpack --config build/webpack.config.js --watch"
   },
   "dependencies": {
     "vue": "^2.1.8",
