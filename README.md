@@ -10,9 +10,9 @@ $ vue init Andself/vue-chrome-starter vue-project
 $ cd vue-project
 $ npm i
 
-$ npm run dev
-
 $ npm run build
+
+$ npm run dev
 ```
 
 ## License
