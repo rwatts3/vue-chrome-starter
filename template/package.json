@@ -1,11 +1,10 @@
 {
-  "name": "vue-chrome-starter",
+  "name": "{{name}}",
   "version": "0.0.1",
-  "description": "Quick start for chrome extensions with Vue2",
+  "description": "{{description}}",
   "main": "index.js",
-  "repository": "git@github.com:Andself/vue-chrome-starter.git",
-  "author": "Andself <chende301@foxmail.com>",
-  "license": "MIT",
+  "repository": "",
+  "author": "{{author}}",
   "scripts": {
     "build": "rm -fr ./dist && webpack --config build/webpack.config.js && cp -r ./src/manifest.json ./src/icons ./dist ",
     "dev": "webpack --config build/webpack.config.js --watch"
