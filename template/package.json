@@ -6,7 +6,7 @@
   "repository": "",
   "author": "{{author}}",
   "scripts": {
-    "build": "rm -fr ./dist && webpack --config build/webpack.config.js && cp -r ./src/manifest.json ./src/icons ./dist ",
+    "build": "rm -fr ./dist && webpack --config build/webpack.config.js",
     "dev": "webpack --config build/webpack.config.js --watch"
   },
   "dependencies": {
