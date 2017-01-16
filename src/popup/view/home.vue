@@ -1,5 +1,5 @@
 <template>
-  <main id="fullPage">
+  <main id="fullPage" :class="`theme_${theme}`">
     <div class="mian">
       <h1>Hello Vue !</h1>
     </div>
@@ -22,16 +22,12 @@ import ListItem from '../component/ListItem';
   export default {
     data () {
       return {
-        pathList: [
-          ]
+        theme: 1,
       }
     },
-    methods: {
+    created () {
+      this.theme =  +window.localStorage.getItem('theme');
     },
-    components: {
-    },
-    computed: {
-    }
   }
 </script>
 <style>
@@ -86,5 +82,13 @@ h1{
   line-height: 1.7;
   font-size: 22px;
   margin-top: 32px;
+}
+
+.theme_1{
+  background: none;
+}
+.theme_2{
+  background: lightgreen;
+  color: #fff;
 }
 </style>
