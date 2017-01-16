@@ -34,6 +34,10 @@ import ListItem from '../component/ListItem';
         theme: '1'
       }
     },
+    created () {
+      this.theme =  +window.localStorage.getItem('theme') || 1;
+    },
+
     methods: {
      saveTheme() {
        console.log(this.theme);

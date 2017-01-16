@@ -26,7 +26,7 @@ import ListItem from '../component/ListItem';
       }
     },
     created () {
-      this.theme =  +window.localStorage.getItem('theme');
+      this.theme =  +window.localStorage.getItem('theme') || 1;
     },
   }
 </script>
