@@ -1,18 +1,18 @@
 const path = require('path')
-// const fs = require('fs-extra')
+const fs = require('fs-extra')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 const config = require('./config')
-// fs.copySync('tmp/', 'dist/')
+fs.copySync('static/', 'dist/')
 
 module.exports = {
   entry: {
     popup: './src/popup/index.js',
     options: './src/options/index.js',
-    'background': './src/background/index.js',
-    vendor:config.vendor,
+    background: './src/background/index.js',
+    // vendor: config.vendor,
   },
   output: {
     path: path.join(__dirname, '../dist'),
@@ -58,10 +58,10 @@ module.exports = {
       filename: 'options.html',
       chunks: ['vendor', 'options']
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      filename: 'vendor.[chunkhash:8].js'
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'vendor',
+    //   filename: 'vendor.[chunkhash:8].js'
+    // }),
     new ProgressBarPlugin(),
   ]
 }
