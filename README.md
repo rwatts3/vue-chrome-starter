@@ -16,4 +16,4 @@ $ npm run dev
 ```
 
 ## License
-[MIT](https://github.com/Andself/vue-chrome-starter/blob/master/LICENSE)
+[MIT](https://github.com/rwatts3/vue-chrome-starter/blob/master/LICENSE)
